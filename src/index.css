@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #FFFFFF;
+  --color-bg-rgb: 255, 255, 255;
+  --color-surface: #FFFFFF;
+  --color-surface-rgb: 255, 255, 255;
+  --color-surface-hover: #FFF8D1;
+  --color-surface-hover-rgb: 255, 248, 209;
+  --color-border: #000000;
+  --color-border-rgb: 0, 0, 0;
+  --color-text-primary: #000000;
+  --color-text-primary-rgb: 0, 0, 0;
+  --color-text-muted: #3D3D3D;
+  --color-text-muted-rgb: 61, 61, 61;
+  --color-accent: #FF6F00;
+  --color-accent-rgb: 255, 111, 0;
+  --color-accent-hover: #E65F00;
+  --color-accent-hover-rgb: 230, 95, 0;
+  --color-accent-text: #000000;
+  --radius-theme: 16px;
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    background-image: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(var(--color-accent-rgb), 0.06), transparent 60%);
+    background-attachment: fixed;
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
